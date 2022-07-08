@@ -8,7 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+    <h3> problem 3: return the string with only the first letter capitalized</h3>
+    <input type="text" id="myText" value="type here">
     
+    <p>Click the "capitalize it" button to return a 'grammatically correct' string</p>
+    
+    <button onclick="capitalize()">click me</button>
+    
+    <!--output location for returned string-->
+    <p id="demo"></p>
+  
    
 </body>
 <script>
@@ -27,16 +36,35 @@ function multiply(a, b) {
 //problem 3, Write a function called capitalize that takes a string and returns that string with 
 //only the first letter capitalized. Make sure that it can take strings 
 //that are lowercase, UPPERCASE or BoTh.
+    let targetString;
+    //input and button function
+    /*
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      //console.log(x + "  <- is the current value of the input string"); //simply for testing
+      document.getElementById("demo").innerHTML = x;
+*/
+      function capitalize() {
+        let targetString = document.getElementById("myText").value;
+        console.log(targetString + " <- is the initial text input");
+        let lowerCasedString = targetString.slice(1,).toLowerCase();
+        console.log(lowerCasedString + " <- force format to lowercase everything but the first value");
+        let upperCasedString = targetString.slice(0,1).toUpperCase();
+        console.log(upperCasedString + " <- force format to uppercase only the first value");
+        let catTheStrings = upperCasedString + lowerCasedString;
+        document.getElementById("demo").innerHTML = catTheStrings;
+        console.log(catTheStrings + " <- concatenate adjusted values");
+        return catTheStrings;
+    }
 
-//below is done but needs the function above for input, slave to targetString's value
+// problem 4, Write a function called lastLetter that takes a string and returns the very last letter of that string:
+// lastLetter("abcd") should return "d"
 
-let targetString = "efshEfsCSEGS";
-function capitalize() {
-    let lowerCasedString = targetString.slice(1,).toLowerCase();
-    let upperCasedString = targetString.slice(0,1).toUpperCase();
-    let catTheStrings = upperCasedString + lowerCasedString;
-    return catTheStrings;
-}
+
+
+
+
+
 
 
 
