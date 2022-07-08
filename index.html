@@ -18,6 +18,16 @@
     <!--output location for returned string-->
     <p id="demo"></p>
   
+    <!--problem 4-->
+
+<h3> problem 4: return only the last letter from the string!</h3>
+<input type="text" id="myText2" value="">
+
+<button onclick="lastLetter()">click me</button>
+<p id="demo2"></p>
+
+
+
    
 </body>
 <script>
@@ -72,20 +82,70 @@ function multiply(a, b) {
 <p id="demo2"></p>
 */
 
-let userInput;
+//------------------------------------------------------------------------------------------------------
+// problem 4, Write a function called lastLetter that takes a string and returns the very last letter of that string:
+// lastLetter("abcd") should return "d"
+
+
+/* html for reference---
+<h3> problem 4: return only the last letter from the string!</h3>
+<input type="text" id="myText2" value="type in me!">
+
+<button onclick="lastLetter()">click me</button>
+<p id="demo2"></p>
+*/
+
 
 function lastLetter() {
-    let userInput = document.getElementById("myText2").value;
-    let strLen = userInput.length;
-    console.log(strLen);
-    //at this ^^ point, strLen successfully counts the length of the user's typed input 
+    userInput = document.getElementById("myText2").value;
+    x = (userInput.slice(-1));
+    return alert(x);
 
-    
-   // document.getElementById("demo2").innerHTML = catTheStrings;
+
+/* initially, I was overengineering this. I envisioned a program similar to my previous one on lesson 3
+that approaches a string as a list; pick it apart and then mush it back together, or not dependeing on the 
+task at hand. Ultimately, this was far too complicated and I skimmed back through the lesson for clues as
+to how they wanted me to implement the concepts. A simple reverse slice seemed to be the solution.
+
+-old muck that I wasted an afternoon trying to get working. Ultimately, I'm happy with my simple
+function (above).
+
+    console.log(userInput + " <- is the typed string");
+    //calculates the length of the string, assigns a variable
+    let strLen = userInput.length;
+    console.log(strLen + " <- is the current string length");
+    //subtracts 1 from the length of the string, assigns a variable
+    let strLenSub1 = strLen - 1;
+    console.log(strLenSub1 + " <- is 1 less than strLen");
+    //define an, until now, null global value
+    console.log("the length of the input string is: " + strLen);
+*/
+
+
 
 }
 
 
+
+
+/* simply experimenting with the slice() function. 
+
+
+//global variable, an empty list/array
+let list = [""];
+
+//this populates the global variable 'list' with values
+function populateList() {
+    list = ["bob", "charles", "candy", "charlene"];
+    return list;
+}
+
+//this slices a select range from the list and only returns that
+function sliceyDicey() {
+    list = list.slice(2, 3);
+    return list;
+}
+  */
 
 
 
