@@ -1,1 +1,148 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> problem 3: return the string with only the first letter capitalized</h3>
+    <input type="text" id="myText" value="type here">
+    
+    <p>Click the "capitalize it" button to return a 'grammatically correct' string</p>
+    
+    <button onclick="capitalize()">click me</button>
+    
+    <!--output location for returned string-->
+    <p id="demo"></p>
+  
+    <!--problem 4-->
+
+<h3> problem 4: return only the last letter from the string!</h3>
+<input type="text" id="myText2" value="">
+
+<button onclick="lastLetter()">click me</button>
+<p id="demo2"></p>
+
+
+
+   
+</body>
+<script>
+
+// problem 1, Write a function called add7 that takes one number and returns that number + 7.
+function add7(val1) {
+    return result = val1 + 7;
+}
+
+// problem 2, Write a function called multiply that takes 2 numbers and returns their product.
+function multiply(a, b) {
+    return a * b;
+}
+
+
+//problem 3, Write a function called capitalize that takes a string and returns that string with 
+//only the first letter capitalized. Make sure that it can take strings 
+//that are lowercase, UPPERCASE or BoTh.
+    let targetString;
+    //input and button function
+    /*
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      //console.log(x + "  <- is the current value of the input string"); //simply for testing
+      document.getElementById("demo").innerHTML = x;
+*/
+      function capitalize() {
+        let targetString = document.getElementById("myText").value;
+        console.log(targetString + " <- is the initial text input");
+        let lowerCasedString = targetString.slice(1,).toLowerCase();
+        console.log(lowerCasedString + " <- force format to lowercase everything but the first value");
+        let upperCasedString = targetString.slice(0,1).toUpperCase();
+        console.log(upperCasedString + " <- force format to uppercase only the first value");
+        let catTheStrings = upperCasedString + lowerCasedString;
+        document.getElementById("demo").innerHTML = catTheStrings;
+        console.log(catTheStrings + " <- concatenate adjusted values");
+        return catTheStrings;
+    }
+
+// problem 4, Write a function called lastLetter that takes a string and returns the very last letter of that string:
+// lastLetter("abcd") should return "d"
+
+// problem 4, Write a function called lastLetter that takes a string and returns the very last letter of that string:
+// lastLetter("abcd") should return "d"
+
+
+/* html for reference
+<h3> problem 4: return only the last letter from the string!</h3>
+<input type="text" id="myText2" value="type in me!">
+<button onclick="lastLetter()">click me</button>
+<p id="demo2"></p>
+*/
+
+//------------------------------------------------------------------------------------------------------
+// problem 4, Write a function called lastLetter that takes a string and returns the very last letter of that string:
+// lastLetter("abcd") should return "d"
+
+
+/* html for reference---
+<h3> problem 4: return only the last letter from the string!</h3>
+<input type="text" id="myText2" value="type in me!">
+<button onclick="lastLetter()">click me</button>
+<p id="demo2"></p>
+*/
+
+
+function lastLetter() {
+    userInput = document.getElementById("myText2").value;
+    x = (userInput.slice(-1));
+    return alert(x);
+
+
+/* initially, I was overengineering this. I envisioned a program similar to my previous one on lesson 3
+that approaches a string as a list; pick it apart and then mush it back together, or not dependeing on the 
+task at hand. Ultimately, this was far too complicated and I skimmed back through the lesson for clues as
+to how they wanted me to implement the concepts. A simple reverse slice seemed to be the solution.
+-old muck that I wasted an afternoon trying to get working. Ultimately, I'm happy with my simple
+function (above).
+    console.log(userInput + " <- is the typed string");
+    //calculates the length of the string, assigns a variable
+    let strLen = userInput.length;
+    console.log(strLen + " <- is the current string length");
+    //subtracts 1 from the length of the string, assigns a variable
+    let strLenSub1 = strLen - 1;
+    console.log(strLenSub1 + " <- is 1 less than strLen");
+    //define an, until now, null global value
+    console.log("the length of the input string is: " + strLen);
+*/
+
+
+
+}
+
+
+
+
+/* simply experimenting with the slice() function. 
+//global variable, an empty list/array
+let list = [""];
+//this populates the global variable 'list' with values
+function populateList() {
+    list = ["bob", "charles", "candy", "charlene"];
+    return list;
+}
+//this slices a select range from the list and only returns that
+function sliceyDicey() {
+    list = list.slice(2, 3);
+    return list;
+}
+  */
+
+
+
+
+
+
+
+</script>
+</html>
