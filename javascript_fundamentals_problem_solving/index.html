@@ -29,8 +29,17 @@ Otherwise print the current number
 
 //subproblem 1: recieving input from the user:
 let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+
 for (let i = 1; i <= answer; i++) {
-  console.log(i);
+  if (i % 3 && i % 5 ===0) {
+    console.log('fizzBuzz');
+  }else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 ===0) {
+    console.log('buzz');
+  }else {
+    console.log(i);
+  }
 }
 
 
